@@ -26,7 +26,7 @@ The different steps needed to create the game starting from the provided code.
 - [ ] collectiblesWon _(The amount of collectible won)_
     - **number/ integer** initial value: 0
 
-### Methods
+#### Methods
 
 - [ ] initiatePlayer
     - loading image

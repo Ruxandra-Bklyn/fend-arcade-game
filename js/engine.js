@@ -107,12 +107,12 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/plate-top_bottom_120X120.png',   // Top row is water
+                'images/road_120X120.png',   // Row 1 of 3 of stone
+                'images/road_120X120.png',   // Row 2 of 3 of stone
+                'images/road_120X120.png',   // Row 3 of 3 of stone
+                'images/plate-top_bottom_120X120.png',   // Row 1 of 2 of grass
+                'images/plate-top_bottom_120X120.png'    // Row 2 of 2 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -134,7 +134,7 @@ var Engine = (function(global) {
                  * so that we get the benefits of caching these images, since
                  * we're using them over and over.
                  */
-                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+                ctx.drawImage(Resources.get(rowImages[row]), col * 120, row * 120);
             }
         }
 
@@ -169,11 +169,11 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
-        'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/road_120X120',
+        'images/plate-top_bottom_120X120.png',
+        'images/plate-top_bottom_120X120.png',
+        'images/Drone1_120X120.png',
+        'images/spaceship_rogue_120X120.png'
     ]);
     Resources.onReady(init);
 

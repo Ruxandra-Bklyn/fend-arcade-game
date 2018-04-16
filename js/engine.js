@@ -169,7 +169,7 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/road_120X120',
+        'images/road_120X120.png',
         'images/plate-top_bottom_120X120.png',
         'images/plate-top_bottom_120X120.png',
         'images/Drone1_120X120.png',

@@ -11,6 +11,81 @@ The different steps needed to create the game starting from the provided code.
 
 ## Class properties and functions
 
+### Player
+
+#### Properties
+- [ ] image _(The PNG attached)_
+    - **string** initial value: '../images/spaceship_rogue_120X120.png'
+- [ ] location _(The current location on the screen)_
+- [ ] hasWon _(If the player has reached the exit or not)_
+    - **boolean** initial value: false
+- [ ] score _(The current score)_
+    - **number/ integer** initial value: 0
+- [ ] hasShield _(If the player has collected the shield or not)_
+    - **boolean** initial value: false
+- [ ] collectiblesWon _(The amount of collectible won)_
+    - **number/ integer** initial value: 0
+
+### Methods
+
+- [ ] initiatePlayer
+    - loading image
+    - initial location
+- [ ] updatePlayer
+    - update location
+    - handles collision with the enemies, collectibles and shield
+- [ ] renderPlayer
+- [ ] handleInputs
+    - left / right / up / down
+    - do not go off screen
+    - win if reaches the exit
+
+### Enemy
+
+#### Properties
+- [ ] image _(The PNG attached)_
+    - **string** initial value: '../images/Drone1_120X120.png'
+- [ ] location _(The current location on the screen)_
+- [ ] speed _(The speed for this very enemy)_
+    - **number** initial value: 1
+
+#### Methods
+- [ ] initiateEnemy
+    - loading image
+    - initial location
+- [ ] updateEnemy
+    - update location
+    - handles collision with the player
+- [ ] renderEnemy
+
+### Collectible
+
+#### Properties
+- [ ] image _(The PNG attached)_
+    - **string** initial value: '../images/gem.png'
+- [ ] location _(The current location on the screen)_
+
+#### Methods
+- [ ] initiateCollectible
+    - loading image
+    - initial location
+- [ ] updateCollectible
+    - handles collision with the player
+
+### Shield
+
+#### Properties
+- [ ] image _(The PNG attached)_
+    - **string** initial value: '../images/Shield.png'
+- [ ] location _(The current location on the screen)_
+
+#### Methods
+- [ ] initiateShield
+    - loading image
+    - initial location
+- [ ] updateShield
+    - handles collision with the player
+
 ## Project Rubric
 - [ ] The game functions correctly and runs error free
 - [ ] Player can not move off screen

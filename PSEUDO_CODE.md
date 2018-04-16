@@ -4,6 +4,11 @@ The different steps needed to create the game starting from the provided code.
 
 ## Classes to write
 
+- Player (character controlled by the player to move and reach the exit)
+- Enemy (the computer-controlled character which cross the screen and collide with the payer)
+- Collectible (The item the player must take to have additional points)
+- Shield (An extra power to collect and which prevent the next collision)
+
 ## Class properties and functions
 
 ## Project Rubric

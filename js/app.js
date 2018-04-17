@@ -42,7 +42,22 @@ Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function() {
+Player.prototype.handleInput = function(keycode) {
+  // Move the player accordingly to the key pressed
+  switch (keycode) {
+    case 'up':
+      if (player.y - 120 >= 0) player.y -= 120;
+    break;
+    case 'down':
+      if (player.y + 120 <= 600) player.y += 120;
+    break;
+    case 'left':
+      if (player.x - 120 >= 0) player.x -= 120;
+    break;
+    case 'right':
+      if (player.x + 120 <= 480) player.x += 120;
+    break;
+  }
 };
 
 // Now instantiate your objects.

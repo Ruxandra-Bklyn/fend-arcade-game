@@ -50,6 +50,10 @@ var Player = function(x, y) {
 };
 
 Player.prototype.update = function(dt) {
+  // Check if the player has won
+  if (player.y === 0) {
+    console.log('You have won!');
+  }
 };
 
 Player.prototype.render = function() {
@@ -75,8 +79,10 @@ Player.prototype.handleInput = function(keycode) {
 };
 
 // Now instantiate your objects.
+// Place the player object in a variable called player
 let player = new Player(240, 600);
 
+// Instantiate the enemies
 let enemy1 = new Enemy(-120, 120, 2);
 let enemy2 = new Enemy(-360, 120, 3);
 let enemy3 = new Enemy(-120, 120, 4);
@@ -95,9 +101,6 @@ enemy3.sprite = 'images/Drone4_120X120.png';
 enemy7.sprite = 'images/Drone4_120X120.png';
 // Place all enemy objects in an array called allEnemies
 let allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8];
-// Place the player object in a variable called player
-
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.

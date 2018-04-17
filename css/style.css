@@ -6,6 +6,7 @@
 
 body {
   text-align: center;
+  font-family: 'Gugi', cursive;
 }
 
 .no-scroll {
@@ -18,7 +19,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #d9d5d3;
 }
 
 /* WIN */
@@ -26,12 +27,38 @@ body {
 .win {
   width: 600px;
   height: 450px;
-  background: #5a5954;
+  background: #a19a95;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  border: 10px solid #c5a57e;
+  padding: 20px;
+  color: #444649;
+  box-shadow: 0 0 30px #444649;
+}
+
+.win h2 {
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+.win p {
+  font-size: 2.5em;
+}
+
+.win button {
+  font-family: 'Gugi', cursive;
+  font-size: 2em;
+  padding: 10px 30px;
+  background: #7a908f;
+  border: 5px solid #444649;
+}
+
+.win button:hover {
+  cursor: pointer;
+  background: #a98062;
 }
 
 /* INTERACTION */

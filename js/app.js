@@ -52,8 +52,12 @@ let enemy1 = new Enemy(0, 0);
 let enemy2 = new Enemy(0, 0);
 let enemy3 = new Enemy(0, 0);
 let enemy4 = new Enemy(0, 0);
+let enemy5 = new Enemy(0, 0);
+let enemy6 = new Enemy(0, 0);
+let enemy7 = new Enemy(0, 0);
+let enemy8 = new Enemy(0, 0);
 // Place all enemy objects in an array called allEnemies
-let allEnemies = [enemy1, enemy2, enemy3, enemy4];
+let allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8];
 // Place the player object in a variable called player
 
 

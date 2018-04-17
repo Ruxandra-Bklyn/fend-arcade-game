@@ -22,9 +22,7 @@ body {
   background: #d9d5d3;
 }
 
-/* WIN */
-/* --------------------------- */
-.win {
+.popup {
   width: 600px;
   height: 450px;
   background: #a19a95;
@@ -39,6 +37,24 @@ body {
   box-shadow: 0 0 30px #444649;
 }
 
+button {
+  font-family: 'Gugi', cursive;
+  font-size: 2em;
+  padding: 10px 30px;
+  background: #7a908f;
+  border: 5px solid #444649;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #a98062;
+}
+
+/* WIN */
+/* --------------------------- */
+.win {
+}
+
 .win h2 {
   text-transform: uppercase;
   font-size: 2.5em;
@@ -48,21 +64,32 @@ body {
   font-size: 2.5em;
 }
 
-.win button {
-  font-family: 'Gugi', cursive;
-  font-size: 2em;
-  padding: 10px 30px;
-  background: #7a908f;
-  border: 5px solid #444649;
+/* CHARACTER */
+/* --------------------------- */
+.characterSelection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
 }
 
-.win button:hover {
+.selectionItem {
+  width: 150px;
+  height: 180px;
+  border: 5px solid #a39c97;
+}
+
+.selectionItem:hover {
+  background: #c8beb7;
   cursor: pointer;
-  background: #a98062;
 }
 
 /* INTERACTION */
 /* --------------------------- */
 .hidden {
   display: none;
+}
+
+.selected {
+  border: 5px solid #c5a57e;
+  background: #c8beb7;
 }

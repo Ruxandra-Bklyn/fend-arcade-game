@@ -8,14 +8,39 @@
 </head>
 <body class="">
   <!-- WINNING POPUP -->
-  <div id="win" class="win hidden">
+  <div id="win" class="win popup hidden">
     <h2>Congratulations!</h2>
     <p>You Won!</p>
     <button id="restart" class="restart">Restart</button>
   </div>
 
+  <!-- CHOOSE CHARACTER POPUP -->
+  <div id="character" class="character popup">
+    <h2>Choose Your Character</h2>
+    <!-- Character selection -->
+    <div class="characterSelection">
+      <!-- HEAL -->
+      <div id="healer" class="selectionItem">
+        <img src="images/spaceship_healer_120X120.png" alt="HEALER">
+        <p>Healer</p>
+      </div>
+      <!-- DPS -->
+      <div id="dps" class="selectionItem selected">
+        <img src="images/spaceship_rogue_120X120.png" alt="DPS">
+        <p>Dps</p>
+      </div>
+      <!-- TANK -->
+      <div id="tank" class="selectionItem">
+        <img src="images/spaceship_Tank_120X120.png" alt="TANK">
+        <p>Tank</p>
+      </div>
+    </div>
+    <!-- START THE GAME -->
+    <button id="start" class="start">Start</button>
+  </div>
+
   <!-- OVERLAY -->
-  <div id="overlay" class="overlay hidden"></div>
+  <div id="overlay" class="overlay"></div>
 
   <!-- SCRIPTS -->
   <script src="js/resources.js"></script>

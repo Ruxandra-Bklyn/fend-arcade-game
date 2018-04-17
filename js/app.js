@@ -1,3 +1,9 @@
+// Reset when colliding an enemy
+function reset() {
+  // Position of the player reset to 240, 600
+  player.x = 240;
+  player.y = 600;
+}
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -19,8 +25,12 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.x = this.x + this.speed;
-
     if (this.x >= 1024) this.x = -240;
+
+    // Check if the enemy is at the same location as the player
+    if (this.y === player.y) {
+      if (player.x >= this.x - 50 && player.x <= this.x + 50) reset();
+    }
 };
 
 // Draw the enemy on the screen, required method for game

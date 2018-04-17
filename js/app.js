@@ -1,3 +1,13 @@
+// Win
+// Make the win popup and overlay appear
+function winGame() {
+  const OVERLAY = document.getElementById('overlay');
+  OVERLAY.classList.remove('hidden');
+
+  const WIN = document.getElementById('win');
+  WIN.classList.remove('hidden');
+}
+
 // Reset when colliding an enemy
 function reset() {
   // Position of the player reset to 240, 600
@@ -51,9 +61,7 @@ var Player = function(x, y) {
 
 Player.prototype.update = function(dt) {
   // Check if the player has won
-  if (player.y === 0) {
-    console.log('You have won!');
-  }
+  if (player.y === 0) winGame();
 };
 
 Player.prototype.render = function() {
@@ -113,4 +121,11 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+});
+
+// Restart the game after winning if click on the restart button
+const RESTART = document.getElementById('restart');
+
+RESTART.addEventListener('click', function() {
+  location.reload();
 });

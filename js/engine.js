@@ -24,8 +24,8 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
+    canvas.width = 600;
+    canvas.height = 720;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -107,7 +107,7 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/plate-top_bottom_120X120.png',   // Top row is water
+                'images/start_end_120X120.png',   // Top row is water
                 'images/road_120X120.png',   // Row 1 of 3 of stone
                 'images/road_120X120.png',   // Row 2 of 3 of stone
                 'images/road_120X120.png',   // Row 3 of 3 of stone
@@ -170,7 +170,7 @@ var Engine = (function(global) {
      */
     Resources.load([
         'images/road_120X120.png',
-        'images/plate-top_bottom_120X120.png',
+        'images/start_end_120X120.png',
         'images/plate-top_bottom_120X120.png',
         'images/Drone1_120X120.png',
         'images/spaceship_rogue_120X120.png'

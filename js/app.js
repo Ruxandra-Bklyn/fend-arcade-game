@@ -75,6 +75,14 @@ let enemy5 = new Enemy(-360, 240, 6);
 let enemy6 = new Enemy(-120, 240, 7);
 let enemy7 = new Enemy(-480, 360, 8);
 let enemy8 = new Enemy(-240, 360, 9);
+
+// Change the sprite of the enemies
+enemy1.sprite = 'images/Drone2_120X120.png';
+enemy4.sprite = 'images/Drone2_120X120.png';
+enemy6.sprite = 'images/Drone3_120X120.png';
+enemy2.sprite = 'images/Drone3_120X120.png';
+enemy3.sprite = 'images/Drone4_120X120.png';
+enemy7.sprite = 'images/Drone4_120X120.png';
 // Place all enemy objects in an array called allEnemies
 let allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8];
 // Place the player object in a variable called player

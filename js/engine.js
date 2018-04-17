@@ -176,7 +176,9 @@ var Engine = (function(global) {
         'images/Drone2_120X120.png',
         'images/Drone3_120X120.png',
         'images/Drone4_120X120.png',
-        'images/spaceship_rogue_120X120.png'
+        'images/spaceship_rogue_120X120.png',
+        'images/spaceship_healer_120X120.png',
+        'images/spaceship_Tank_120X120.png',
     ]);
     Resources.onReady(init);
 

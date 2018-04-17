@@ -5,13 +5,13 @@ function startGame() {
 
   switch (selectedCharacter) {
     case 'healer':
-      player.sprite = 'spaceship_healer_120X120.png';
+      player.sprite = 'images/spaceship_healer_120X120.png';
     break;
     case 'dps':
-      player.sprite = 'spaceship_rogue_120X120.png';
+      player.sprite = 'images/spaceship_rogue_120X120.png';
     break;
     case 'tank':
-      player.sprite = 'spaceship_Tank_120X120.png';
+      player.sprite = 'images/spaceship_Tank_120X120.png';
     break;
   }
 }
@@ -146,4 +146,13 @@ const RESTART = document.getElementById('restart');
 
 RESTART.addEventListener('click', function() {
   location.reload();
+});
+
+// Start the game after player selection
+const START = document.getElementById('start');
+
+START.addEventListener('click', function() {
+  document.getElementById('character').classList.add('hidden');
+  document.getElementById('overlay').classList.add('hidden');
+  startGame();
 });

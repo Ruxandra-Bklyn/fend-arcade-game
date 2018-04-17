@@ -1,3 +1,21 @@
+// Start game
+function startGame() {
+  // Check the selected character
+  let selectedCharacter = document.querySelector('.selected').id;
+
+  switch (selectedCharacter) {
+    case 'healer':
+      player.sprite = 'spaceship_healer_120X120.png';
+    break;
+    case 'dps':
+      player.sprite = 'spaceship_rogue_120X120.png';
+    break;
+    case 'tank':
+      player.sprite = 'spaceship_Tank_120X120.png';
+    break;
+  }
+}
+
 // Win
 // Make the win popup and overlay appear
 function winGame() {

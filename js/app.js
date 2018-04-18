@@ -26,6 +26,13 @@ function winGame() {
   WIN.classList.remove('hidden');
 }
 
+// remove all selected classes
+function removeSelectedClass() {
+  document.getElementById('healer').classList.remove('selected');
+  document.getElementById('dps').classList.remove('selected');
+  document.getElementById('tank').classList.remove('selected');
+}
+
 // Reset when colliding an enemy
 function reset() {
   // Position of the player reset to 240, 600
@@ -148,10 +155,29 @@ RESTART.addEventListener('click', function() {
   location.reload();
 });
 
+// Choose the character to play
+const CHARACTER_SELECTION = document.getElementById('character-selection');
+
+CHARACTER_SELECTION.addEventListener('click', function(event) {
+  let characterChoosen = event.target;
+  // Check the id of the element or the parent
+  if (event.target.id === 'healer' || event.target.parentElement.id === 'healer') {
+    removeSelectedClass();
+    document.getElementById('healer').classList.add('selected');
+  } else if (event.target.id === 'dps' || event.target.parentElement.id === 'dps') {
+    removeSelectedClass();
+    document.getElementById('dps').classList.add('selected');
+  } else if (event.target.id === 'tank' || event.target.parentElement.id === 'tank') {
+    removeSelectedClass();
+    document.getElementById('tank').classList.add('selected');
+  }
+});
+
 // Start the game after player selection
 const START = document.getElementById('start');
 
 START.addEventListener('click', function() {
+  // Hide the popup
   document.getElementById('character').classList.add('hidden');
   document.getElementById('overlay').classList.add('hidden');
   startGame();

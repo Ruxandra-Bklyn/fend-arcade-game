@@ -1,8 +1,10 @@
 // Start game
+// Initialize the game
 function startGame() {
   // Check the selected character
   let selectedCharacter = document.querySelector('.selected').id;
 
+  // Change the sprite of the character accordingly to the selected one
   switch (selectedCharacter) {
     case 'healer':
       player.sprite = 'images/spaceship_healer_120X120.png';
@@ -16,7 +18,7 @@ function startGame() {
   }
 }
 
-// Win
+// Win Game
 // Make the win popup and overlay appear
 function winGame() {
   const OVERLAY = document.getElementById('overlay');
@@ -27,6 +29,7 @@ function winGame() {
 }
 
 // remove all selected classes
+// Useful to un-style the characters on the character's choice popup
 function removeSelectedClass() {
   document.getElementById('healer').classList.remove('selected');
   document.getElementById('dps').classList.remove('selected');
@@ -39,6 +42,7 @@ function reset() {
   player.x = 240;
   player.y = 600;
 }
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -50,6 +54,7 @@ var Enemy = function(x, y, speed) {
     // Take the position from the parameter
     this.x = x;
     this.y = y;
+    // Take the speed from the parameter
     this.speed = speed;
 };
 
@@ -63,6 +68,7 @@ Enemy.prototype.update = function(dt) {
     if (this.x >= 1024) this.x = -240;
 
     // Check if the enemy is at the same location as the player
+    // If true, reset the position of the player
     if (this.y === player.y) {
       if (player.x >= this.x - 50 && player.x <= this.x + 50) reset();
     }
@@ -84,15 +90,18 @@ var Player = function(x, y) {
   this.y = y;
 };
 
+// Check if the player has won
 Player.prototype.update = function(dt) {
-  // Check if the player has won
+  // If yes, make the winning popup appears
   if (player.y === 0) winGame();
 };
 
+// Draw the player on the screen
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// Manage the player's movement by using the arrow keys
 Player.prototype.handleInput = function(keycode) {
   // Move the player accordingly to the key pressed
   switch (keycode) {
@@ -161,6 +170,7 @@ const CHARACTER_SELECTION = document.getElementById('character-selection');
 CHARACTER_SELECTION.addEventListener('click', function(event) {
   let characterChoosen = event.target;
   // Check the id of the element or the parent
+  // When a character is clicked, remove the selected class for every character and add it to the selected one
   if (event.target.id === 'healer' || event.target.parentElement.id === 'healer') {
     removeSelectedClass();
     document.getElementById('healer').classList.add('selected');

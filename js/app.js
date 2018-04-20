@@ -64,7 +64,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x + this.speed;
+    this.x += (this.speed * dt);
     if (this.x >= 1024) this.x = -240;
 
     // Check if the enemy is at the same location as the player
@@ -125,14 +125,14 @@ Player.prototype.handleInput = function(keycode) {
 let player = new Player(240, 600);
 
 // Instantiate the enemies
-let enemy1 = new Enemy(-120, 120, 2);
-let enemy2 = new Enemy(-360, 120, 3);
-let enemy3 = new Enemy(-120, 120, 4);
-let enemy4 = new Enemy(-240, 240, 5);
-let enemy5 = new Enemy(-360, 240, 6);
-let enemy6 = new Enemy(-120, 240, 7);
-let enemy7 = new Enemy(-480, 360, 8);
-let enemy8 = new Enemy(-240, 360, 9);
+let enemy1 = new Enemy(0, 120, 250);
+let enemy2 = new Enemy(-360, 120, 326);
+let enemy3 = new Enemy(-120, 120, 542);
+let enemy4 = new Enemy(-240, 240, 704);
+let enemy5 = new Enemy(-360, 240, 298);
+let enemy6 = new Enemy(0, 240, 402);
+let enemy7 = new Enemy(-480, 360, 476);
+let enemy8 = new Enemy(-240, 360, 665);
 
 // Change the sprite of the enemies
 enemy1.sprite = 'images/Drone2_120X120.png';
